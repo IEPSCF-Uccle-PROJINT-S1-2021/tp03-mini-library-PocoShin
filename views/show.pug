@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Ma collection
+    style
+      include style.css
+  body
+    h1 Ma collection - #{choice}
+
+    table.table
+      tr
+        th Auteur
+        th Titre
+      for item in selectedList
+        tr
+            td #{item.author}
+            td #{item.title}
+    p
+      a(href="/") Retour à la page principale

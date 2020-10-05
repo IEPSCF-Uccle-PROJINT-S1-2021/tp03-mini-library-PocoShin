@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    style
+      include style.css
+  body
+    h1= title
+
+      form(action='/books/list' method='post')
+        select(name= 'category')
+          option(value='autobiographie') Autobiographie
+          option(value='dark fantasy') Dark fantasy
+          option(value='fantasy') Fantasy
+          option(value='roman historique') Roman historique
+
+        input(
+          type='submit'
+          value='Envoyer'
+        )
